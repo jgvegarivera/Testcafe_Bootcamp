@@ -1,3 +1,5 @@
+
+![](https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif)
 # TestCafe BootCamp
 Este proyecto es producto de la experiencia del curso impartido por QA Minds Labs.
 
@@ -22,8 +24,8 @@ $ brew install node
 
 >**Descarga e instalación** de <a href="https://git-scm.com/downloads" rel="nofollow" _istranslated="1">Git</a> entra al link y descarga la versión adecuada para tu sistema operativo (Recomiendo no mover nada durante la instalación, solo darle siguiente).
 
-> **Descarga e instalación** de <a href="https://code.visualstudio.com/download" rel="nofollow">Visual Studio Code</a> entra al link y descarga la versión correcta para tu Sistema Operativo.
-
+> **Descarga e instalación** de <a href="https://code.visualstudio.com/download" rel="nofollow">Visual Studio Code</a> entra al link y descarga la versión correcta para tu Sistema Operativo.<p>
+>![](https://media.giphy.com/media/kdiLau77NE9Z8vxGSO/giphy.gif)
 # Integrando Git a VisualStudio Code
 Si te gusta trabajar directamente de VisualStudio code sin abrir una terminal aparte de Bash, vamos a integrarlo.
 Para ellos seguiremos los siguientes pasos.
@@ -51,4 +53,5 @@ Una vez instalado comprobamos que existe con el siguiente comando:<p>
   
 # Felicidades!!
 
-**Ahora que ya tienes testcafe puedes comenzar a interactuar con el contenido de este repositorio.**
+**Ahora que ya tienes testcafe puedes comenzar a interactuar con el contenido de este repositorio.**<p>
+![](https://media.giphy.com/media/xT1XGzXhVgWRLN1Cco/giphy.gif)
