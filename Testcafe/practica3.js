@@ -29,3 +29,12 @@ fixture('Test con testcafe')
         await t
             .expect(page.text33.innerText).contains('sent', 'Prueba exitosa')
     });
+    
+    test("Prueba Error (500 Internal Server Error)", async t =>{
+        await t
+            .click(page.link3)
+        await t
+            .click(page.button32)
+        await t
+            .expect(page.text34.innerText).contains("Internal Server Error")
+    });

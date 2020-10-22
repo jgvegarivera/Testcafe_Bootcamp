@@ -10,6 +10,7 @@ class Page {
     this.input31 = Selector('#email');
     this.button32 = Selector('#form_submit');
     this.text33 = Selector('#content');
+    this.text34 = Selector('body > h1');
     // Practica 4
     this.link4 = Selector('a').withText('Checkboxes');
     //Checkbox Padre
