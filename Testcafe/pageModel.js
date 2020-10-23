@@ -27,8 +27,10 @@ class Page {
     this.link6 = Selector ('a').withText('Add/Remove Elements');
     this.addBtn61 = Selector ('#content > div > button');
     this.remBtn62 = Selector ('#elements > button');
-    this.remBtn63 = Selector ('#elements > button:nth-child(2)');
-    this.remBtn64 = Selector ('#elements > button:nth-child(3)');
+    this.remBtn63 = Selector ('#elements > button:nth-child(1)');
+    this.remBtn64 = Selector ('#elements > button:nth-child(2)');
+    this.remBtn65 = Selector ('#elements > button:nth-child(3)');
+
 
     //Practica 7
     this.link7 = Selector ('a').withText('Complete Web Form');
