@@ -3,7 +3,7 @@ import page from './pageModel';
 fixture('Test con testcafe')
     .page('http://the-internet.herokuapp.com/')
 
-    test('Probar checkboxes deseleccionados', async t =>{
+    test('Probar presion de teclas', async t =>{
         await t
             .click(page.link9)
         await t
