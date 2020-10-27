@@ -16,14 +16,9 @@ test('Probar slider horizontal con teclas', async t => {
     await t 
         .click(page.link11)
     await t
-     //   const slider = await t.page.slider11
-        console.log(page.slider11)
-    await t
-       // .click(page.slider11)
-        .pressKey('tab', {speed:0.01})
-        .pressKey('tab')
-        .pressKey('up', {speed:0.01})
-        .wait(300)
-        .pressKey('up')
+        .click(page.slider11)
+        .pressKey('RIGHT')
+        .pressKey('RIGHT')
+        .wait(500)
         .expect(page.slider11.value).eql('1')
 });
