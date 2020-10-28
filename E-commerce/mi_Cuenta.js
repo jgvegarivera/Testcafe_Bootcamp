@@ -1,10 +1,5 @@
 import page from './PageObjectModel';
-//Variables
-let rndNumber = Math.random().toString(36).substr(1,4);
-const email = 'dummy' + rndNumber + '@mailinator.com'
-const firstName = "Gabo"
-const lastName = "Rivery"
-const password = "12345678"
+import { data } from './data';
 //Página y modulo a probar
 fixture('Pruebas de modulo mi cuenta')
     .page('http://automationpractice.com/');
@@ -13,23 +8,37 @@ test('Crear una cuenta', async t =>{
     //Click en Sing In
     await t
         .click(page.signIn_link)
-        console.log("Correo: ", email)
+        console.log("Correo: ", data.email)
+        console.log("firstName: ", data.firstName)
+        console.log("lastName: ", data.lastName)
     //Insertar correo y dar click a crear cuenta
     await t
-        .typeText(page.email_input, email)
+        .typeText(page.email_input, data.email)
         .click(page.createAccount_btn)
     //Validacion del correo en formulario
     await t
-        .expect(page.email_form.value).contains(email)
+        .expect(page.email_form.value).contains(data.email)
         .expect(page.email_form.hasAttribute('readonly')).notOk()
     //LLenar campos
-        .typeText(page.firstName_input, firstName)
-        .typeText(page.lastName_input, lastName)
-        .typeText(page.password_input, password)
-        .expect(page.firstName_Address.value).contains(firstName)
-        .expect(page.lastName_Address.value).contains(lastName)
-        .typeText(page.adress, "PO Box 533")
-
+        .typeText(page.firstName_input, data.firstName)
+        .expect(page.firstName_input.value).contains(data.firstName)
+        .typeText(page.lastName_input, data.lastName)
+        .expect(page.lastName_input.value).contains(data.lastName)
+        .typeText(page.password_input, data.password)
+        .expect(page.password_input.value).contains(data.password)
+        .expect(page.firstName_Address.value).contains(data.firstName)
+        .expect(page.lastName_Address.value).contains(data.lastName)
+        .typeText(page.adress, data.pbox)
+        .expect(page.adress.value).contains(data.pbox)
+        .typeText(page.city, data.city)
+        .expect(page.city.value).contains(data.city)
+        .click(page.state)
+        .click(page.opnState)
+        .typeText(page.zip, data.zip)
+        .expect(page.zip.value).contains(data.zip)
+        .click(page.country)
+        .click(page.opnCountry)
+        .expect(page.adressAlias.value).contains(data.adress_Alias)
 });
 
 //test('Loggearse con la nueva cuenta', async t =>{});
