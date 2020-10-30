@@ -15,15 +15,19 @@ test('Crear una cuenta', async t =>{
     await t
         .typeText(page.email_input, data.email)
         .click(page.createAccount_btn)
+        //.takeScreenshot()
     //Validacion del correo en formulario
     await t
+        //.MaximizeWindow()
         .expect(page.email_form.value).contains(data.email)
         .expect(page.email_form.hasAttribute('readonly')).notOk()
+        //.takeScrenshot()
     //LLenar campos
         .typeText(page.firstName_input, data.firstName)
+        //.takeElementScreenshot(page.firstName_input)
         .expect(page.firstName_input.value).contains(data.firstName)
         .typeText(page.lastName_input, data.lastName)
-        .expect(page.lastName_input.value).contains(data.lastName)
+        .expect(page.lastName_input.value).contains("data.lastName")
         .typeText(page.password_input, data.password)
         .expect(page.password_input.value).contains(data.password)
         .expect(page.firstName_Address.value).contains(data.firstName)
